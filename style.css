@@ -1,0 +1,217 @@
+a {
+    color: #8cf6db;
+  }
+  p{
+    font-size: 15px;
+        font-family: Arial, sans-serif;
+        color: rgb(0, 0, 0);
+  
+  }
+  li{
+    font-size: 15px;
+        font-family: Arial, sans-serif;
+        color: rgb(0, 0, 0);
+  
+  }
+  /* Estilos para el título */
+  h1 {
+    animation: shine 2s;
+  }
+  @keyframes shine {
+    from {text-shadow: 0 0 0 #fff;}
+    to {text-shadow: 0 0 10px rgb(7, 80, 123);}
+  }
+  
+  
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: rgb(62, 42, 82);
+    color: white;
+    padding: 2%;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+  }
+  #logo {
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: auto;
+    height: 10%;
+    max-width: 100%;
+    border-radius: 100%;
+  }
+  
+  
+  nav li {
+    /* Otras propiedades de los elementos de la lista */
+    background-color: #eee;
+    color: #333;
+    display: block;
+    padding: 1%;
+   
+  }
+  
+  nav li:hover {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10%;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+  }
+  .month-title {
+    font-size: 2em;
+    color: #110d0d;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2%;
+    
+  }
+  
+  section {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    box-shadow: 2% 2% 5% rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    width: 30%;
+  }
+  
+  
+  section {
+    /* Otras propiedades de las secciones */
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+   img {
+    width: 5%; /* Tamaño fijo en pixels */
+    height: 5%; /* Tamaño fijo en pixels */
+    object-fit: cover; /* Asegurar que la imagen se ajuste al tamaño especificado */
+  }
+  
+  footer {
+
+    background-color:rgb(62, 42, 82);
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  .carousel-container {
+    position: relative; /* Habilitar el scroll */
+    width: calc(100% - 0px); /* Ajustar el tamaño del contenedor al espacio disponible */
+    height: 400px; /* Tamaño fijo en pixels */
+    overflow-x: scroll; /* Habilitar el scroll horizontal */
+    overflow-y: hidden; /* Ocultar el scroll en el eje y */
+    display: flex;
+  }
+  
+  
+  .carousel-container img {
+    margin-right: 5px; /* Agregar un espacio de 5px entre las imágenes */
+    width: auto; /* Asegurar que las imágenes se ajusten al tamaño del contenedor */
+    height: 100%; /* Asegurar que la proporción de la imagen se mantenga */
+    white-space: nowrap; /* Asegurar que las imágenes no se salgan de la linea */
+  }
+  .carousel-container::-webkit-scrollbar {
+    width: 1%; /* Tamaño de la barra de scroll */
+    background-color: #f5f5f5; /* Color de fondo de la barra de scroll */
+  }
+  .carousel-container::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Forma del botón de desplazamiento */
+    background-color: #888; /* Color del botón de desplazamiento */
+  }
+  .carousel-container img:hover {
+    transform: scale(1.2); /* Aumentar el tamaño de la imagen en un 20% */
+  }
+  .carousel-container img {
+    transition: transform 0.5s; /* tiempo de transición de 0.5s */
+  }
+  #modal {
+  position: fixed; /* para que el modal quede en medio de la pantalla */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px #999; 
+  z-index: 999; 
+  }
+  
+  #modal-content {
+  text-align: center; /* para centrar el contenido */
+  }
+  
+  #modal-content p {
+  font-size: 18px; /* tamaño de fuente */
+  margin-bottom: 20px; /* espacio debajo del texto */
+  }
+  
+  #modal-content button {
+  background-color: #4CAF50; /* color de fondo */
+  color: white; 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  margin-right: 10px; 
+  }
+  
+  #modal-content button:hover {
+  background-color: #6e1ccd; /* color de fondo al pasar el mouse */
+  }
+  
+  #image-url {
+  display: none; /* ocultar el campo de input */
+  }
+  .face{
+    width:10% ;
+    height: auto;
+  }
+ 

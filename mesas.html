@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galería de Fotos</title>
+  <style>
+   /* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos del header */
+header {
+  background-color:rgb(62, 42, 82);
+  color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 0 10px;
+}
+nav {
+  background-color: #a1b3e978; /*color de fondo*/
+  display: flex; /* para alinear los elementos del nav */
+  justify-content: center; /* para centrar los elementos*/
+  padding: 10px 0; /* para dar espacio arriba y abajo*/
+  position: sticky; /* para que el nav siempre este visible */
+  top: 0; /* para que siempre este arriba */
+}
+
+nav a {
+  color: #f2f2f2; /*color del texto */
+  text-decoration: none; /* quitar subrayado */
+  padding: 0 10px; /* espacio entre los elementos */
+  font-weight: bold; /* para que sea mas llamativo */
+}
+
+nav a:hover {
+  background-color: #f2f2f257; /*color de fondo al hacer hover */
+  color: #282828; /* color del texto al hacer hover */
+  transition: background-color 0.5s ease; /* para que la transición sea suave */
+}
+nav a.boton {
+    border-radius: 25px; /* para redondear el borde */
+    border: 2px solid #f2f2f2; /* para agregar un borde */
+    padding: 10px 20px; /* para dar espacio dentro del botón */
+    transition: all 0.3s ease; /* para que la transición sea suave */
+    margin-right:10px ;
+}
+
+nav a.boton:hover {
+    background-color: #f2f2f2; /*color de fondo al hacer hover */
+    color: #282828; /* color del texto al hacer hover */
+}
+
+
+/* Estilos de la galería */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.foto {
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #cccccc;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+}
+
+/* Estilos del footer */
+footer {
+background-color: rgb(62, 42, 82);
+color: white;
+padding: 20px;
+text-align: center;
+font-size: 1.2em;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+footer p {
+margin: 0;
+}
+
+footer a {
+color: white;
+text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+.foto {
+width: 200px;
+}
+}
+
+@media (max-width: 400px) {
+.foto {
+width: 100%;
+margin: 10px 0;
+}
+}
+.face{
+width: 50px;
+
+}
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .foto {
+    width: 200px; /* reducir el tamaño de las imágenes */
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .foto {
+    width: 100%; /* hacer que las imágenes ocupen todo el ancho */
+    margin: 5px 0; /* reducir el margen entre las imágenes */
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* reducir el tamaño de la fuente */
+  }
+}
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none; /* ocultar el menú de navegación */
+  }
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Catalogo de Mesas</h1>
+</header>
+  <nav>
+    <a href="javascript:history.back()" class="boton">Volver</a>
+    <a onclick="enviarMensajeWhatsApp()" class="boton">hacer pedido</a>
+  </nav>
+  <div class="galeria">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/325942029_737156441162133_7966034197365864159_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=v95SPcRupIsAX8w58ug&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfA3DwK1OBSds_n7F5ILiNHLhOP8T2FYlYG68bsFvhcPiQ&oe=63CA3276" alt="Foto 1" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326034554_547641907407611_3754845057275620980_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=-FOGaZPczwEAX8hOgYT&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfBYZ0TTRXLZlaIFryH4PKr8QBOSOoXInHGcF0J1OXlydA&oe=63CB446F" alt="Foto 2" class="foto">
+    <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/326005626_717829556635365_875428080346190249_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=kpaDpCwuOGwAX9WQ3IP&_nc_ht=scontent.fvvi1-2.fna&oh=00_AfARFW_8WcX82HBQJo7lqNex9PzqM8uD0bV8PZmIErQb_g&oe=63CA4DB3" alt="Foto 3" class="foto">
+    <!-- Agregar más imágenes si es necesario -->
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326134634_1227454297977572_2002694473747251588_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=7Z4qDYRApXwAX_DB8f6&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfBAbMU2avqc8GtdEYOkrEtn2_VJaTIxw6-_ZSxcC9-wnQ&oe=63CB18EE" alt="Foto 1" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326087531_557760302927999_7866166298784742396_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=o6LAzYbF25EAX8hc1Ye&tn=CcIpFzzK9b7L9m4H&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfDgY2_5IjCwy0_rjd9xdBRSOWWHEFBvxk3akksKVqGrng&oe=63CA1C13" alt="Foto 2" class="foto">
+    <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/326031250_1358759948204671_9010232103158353550_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=QgxrF6jowmwAX89_Fze&_nc_ht=scontent.fvvi1-2.fna&oh=00_AfA15GMcUaf7XTxSFh5zuET6qaSaK8f36rZx1Y885y9zXA&oe=63CB11BF" alt="Foto 3" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/325998714_572063774935054_756215831976178243_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=53d5JkPb91gAX_CbK5f&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfC0PXiZ8pO7QxhSImcNly0ZzTqo1OVglFZOAACjZ82OYQ&oe=63CA8EA1" alt="Foto 1" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326052165_8679425072131109_1351125291817072_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=EGTP5N-al7AAX9CbVwB&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfB5k3xxeXj-7gPru8WOHAEXChmv2tvNz3DCg9Ix64JOcA&oe=63C97537" class="foto">
+    <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/325655706_1823708594662459_6772163301963994042_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=dgzBWrVuuF8AX9arVqO&tn=CcIpFzzK9b7L9m4H&_nc_ht=scontent.fvvi1-2.fna&oh=00_AfDBVOpjVi9B_dWf9KU6rP4Todjz6cawKVWk96Ec9xFUKw&oe=63C9D5F0" alt="Foto 3" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326110034_1141589763214097_7365089139855894578_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=cjePFL8I97YAX-Bt9z0&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfAfZC_SAJ7UGWsHfMWbCrxSkvP0GmPsscXPfrh6JO-JnA&oe=63CA7FDC" alt="Foto 1" class="foto">
+  <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/325911663_1232639284348623_3106362713087956493_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=ica0YyeeLrUAX-q2zMC&_nc_ht=scontent.fvvi1-2.fna&oh=00_AfDzcMB3krQkexRNxTTSkeamxuEJLStVCWd6G94wCf9COg&oe=63CADA06" alt="" class="foto"> 
+    <img src="https://scontent.fvvi1-2.fna.fbcdn.net/v/t39.30808-6/326052149_630696485523868_2847963023904813043_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=8O3nTMtu1n8AX9_So-i&_nc_ht=scontent.fvvi1-2.fna&oh=00_AfDSlZIM87YOZkuYqMTZjh2PDC7-k-y9uGmnXExfdTsOzQ&oe=63CAAFDA" alt="Foto 2" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326000123_6342214872473480_1453144191068739080_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=exD3tT3oYVIAX-RlO9L&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfCYpjI9_NlPrriRywYBN8l0glxc6eWJAqvmKWEC2nTYFw&oe=63C96238" alt="" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326011465_712572660517956_3408668695579770028_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=Vo5pQHBXvTQAX9Lm1HO&tn=CcIpFzzK9b7L9m4H&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfARHE6qPvqyCRo7qOvMZAUygWRZAwuVJEJOViQYajtMZQ&oe=63C9A064" alt="" class="foto">
+    <img src="https://scontent.fvvi1-1.fna.fbcdn.net/v/t39.30808-6/326049570_529237739001639_3271777771289350411_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=T669Xa9XfYcAX9bH5KR&_nc_ht=scontent.fvvi1-1.fna&oh=00_AfAnx43_IgnwjSOCKTv32XkIKflq6W3R9Iss09jzqBPgoQ&oe=63CA77DE" alt="Foto 3" class="foto">
+  </div>
+  <footer>
+    <p id="footer" style="color: rgb(255, 255, 255);">contactanos: <a href="https://wa.me/c/59163603050">+59163603050</a></p> 
+    
+    <img  alt="">
+    <a href="https://www.facebook.com/profile.php?id=100089124625587">
+      <img class="face" src="https://clipart.info/images/ccovers/1509135366facebook-symbol-png-logo.png" alt="Logo de mi sitio web">
+    </a>
+    <a href="https://wa.me/c/59163603050">
+      <img class="face" src="https://th.bing.com/th/id/OIP.DKoNzgCuYdxYbsiRSE7rjgHaHa?w=201&h=201&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="Logo de mi sitio web">
+    </a>
+  </footer>
+  <script>
+    
+
+  function enviarMensajeWhatsApp() {
+    var numero = "+59163603050"; //Reemplaza por el número de teléfono de WhatsApp al que quieres enviar el mensaje
+    var mensaje = "ver catalogo de mesas"; //Reemplaza por el texto del mensaje que quieres enviar
+    var url = "https://wa.me/" + numero + "?text=" + mensaje;
+    window.open(url);
+  }
+</script>
+  
+</body>
+</html>
