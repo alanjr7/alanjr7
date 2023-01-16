@@ -218,7 +218,7 @@ a {
   /* Estilo para pantallas grandes */
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   #logo {
    display: none; 
   }
