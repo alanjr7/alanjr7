@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
+  
   <title>Galería de Fotos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
   <style>
    /* Estilos generales */
 body {
@@ -68,7 +70,13 @@ nav a.boton {
     border: 2px solid #040404; /* para agregar un borde */
     padding: 10px 20px; /* para dar espacio dentro del botón */
     transition: all 0.3s ease; /* para que la transición sea suave */
-    margin-right:10px ;
+    margin-right:5px ;
+}
+@media only screen and (max-width: 600px) {
+  nav a.boton {
+    display: block; /* para que cada botón ocupe una línea completa */
+    margin: 5px 0; /* para dar espacio arriba y abajo de cada botón */
+  }
 }
 
 nav a.boton:hover {
@@ -159,12 +167,12 @@ width: 50px;
   }
 }
 .what{
-    height:auto;
-    width:5%;
+    height:50px;
+    width:auto;
   }
 
   </style>
-</head>
+
 <body>
   <header>
   <h1>Catalogo de camas</h1>
@@ -206,7 +214,9 @@ width: 50px;
     </a>
   </footer>
   <script>
-    var images = document.querySelectorAll('img.foto');
+ 
+ 
+  var images = document.querySelectorAll('img.foto');
 
 images.forEach(function(image) {
   image.addEventListener('click', function(e) {
@@ -214,6 +224,11 @@ images.forEach(function(image) {
     window.open(imageUrl, '_blank');
   });
 });
+
+ 
+
+
+ 
 
   function enviarMensajeWhatsApp() {
     var numero = "+59163603050"; //Reemplaza por el número de teléfono de WhatsApp al que quieres enviar el mensaje
