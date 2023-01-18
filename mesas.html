@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería de Fotos</title>
   <style>
    /* Estilos generales */
@@ -42,6 +43,7 @@ header nav a {
   text-decoration: none;
   padding: 0 10px;
 }
+
 nav {
   background-color: #a1b3e978; /*color de fondo*/
   display: flex; /* para alinear los elementos del nav */
@@ -70,7 +72,12 @@ nav a.boton {
     transition: all 0.3s ease; /* para que la transición sea suave */
     margin-right:10px ;
 }
-
+@media only screen and (max-width: 600px) {
+  nav a.boton {
+    display: block; /* para que cada botón ocupe una línea completa */
+    margin: 5px 0; /* para dar espacio arriba y abajo de cada botón */
+  }
+}
 nav a.boton:hover {
     background-color: #f2f2f2; /*color de fondo al hacer hover */
     color: #282828; /* color del texto al hacer hover */
@@ -159,10 +166,9 @@ width: 50px;
   }
 }
 .what{
-    height:auto;
-    width:5%;
+    height:50px;
+    width:auto;
   }
-
   </style>
 </head>
 <body>
@@ -206,7 +212,7 @@ width: 50px;
     </a>
   </footer>
   <script>
-     var images = document.querySelectorAll('img.foto');
+     var images = document.querySelectorAll('img');
 
 images.forEach(function(image) {
   image.addEventListener('click', function(e) {
