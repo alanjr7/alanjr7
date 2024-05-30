@@ -186,7 +186,59 @@
     window.open(url);
     document.getElementById("modal").style.display = "none";
   }
-  
+   document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('imageContainer');
+    let scrollAmount = 0;
+    const slideTimer = 50; // Ajusta este valor para cambiar la velocidad
+    const step = 1; // Ajusta este valor para cambiar la cantidad de scroll por paso
+    let isScrolling = true;
+    let scrollInterval;
+
+    function startScrolling() {
+        scrollInterval = setInterval(function() {
+            if (isScrolling) {
+                scrollAmount = container.scrollLeft + step;
+                container.scrollLeft = scrollAmount;
+
+                if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+                    scrollAmount = 0;
+                    container.scrollLeft = 0;
+                }
+            }
+        }, slideTimer);
+    }
+
+    function stopScrolling() {
+        clearInterval(scrollInterval);
+    }
+
+    container.addEventListener('mouseover', function() {
+        isScrolling = false;
+    });
+
+    container.addEventListener('mouseout', function() {
+        isScrolling = true;
+    });
+
+    container.addEventListener('mousedown', function() {
+        isScrolling = false;
+    });
+
+    document.addEventListener('mouseup', function(event) {
+        if (!container.contains(event.target)) {
+            isScrolling = true;
+        }
+    });
+
+    container.addEventListener('scroll', function() {
+        if (isScrolling) {
+            scrollAmount = container.scrollLeft;
+        }
+    });
+
+    startScrolling();
+});
+
   </script>  
 </body>
 </html>
